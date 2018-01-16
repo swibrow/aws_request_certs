@@ -1,0 +1,10 @@
+domains:
+    - test.example.com
+    - test1.example.com
+    - test2.example.com
+
+regions:
+    - ap-southeast-2
+    - eu-west-1
+    - eu-central-1
+    - us-east-1
