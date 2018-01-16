@@ -33,7 +33,7 @@ def set_route53_record(region, domain, record_name, record_value):
     print (region, domain, record_name, record_value)
     route53_conn = boto3.client('route53')
     response = route53_conn.list_hosted_zones_by_name(
-        DNSName='infra.stylight.net')
+        DNSName=domain)
     zone_id = response['HostedZones'][0]['Id'].split('/hostedzone/')[1]
     route53_conn = boto3.client('route53')
     route53_conn.change_resource_record_sets(
